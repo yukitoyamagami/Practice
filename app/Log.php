@@ -13,6 +13,7 @@ class Log extends Model
         'datelog' => 'required',
         'bodylog' => 'required',
         );
+        
         public function users()
     {
         return $this->belongsTo('App\User');

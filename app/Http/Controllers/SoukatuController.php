@@ -68,8 +68,9 @@ class SoukatuController extends Controller
   public function createlog(Request $request)
   {
     $this->validate($request, Log::$rules);
-    
     $log = new Log;
+    $log->user_id = $request->user()->id;
+    $log->goal_id = $request->goal()->id;
     $form = $request->all();
     
     $log->fill($form)->save();

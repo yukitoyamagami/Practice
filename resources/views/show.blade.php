@@ -10,7 +10,7 @@
                 <a href="{{ action('SoukatuController@goal') }}" role="button" class="btn btn-primary">新規作成</a>
             </div>
             <div class="col-md-8">
-                <form action="{{ action('SoukatuController@index') }}" method="get">
+                <form action="{{ action('SoukatuController@show') }}" method="get">
                     <div class="form-group row">
                         <label class="col-md-2">タイトル</label>
                         <div class="col-md-8">
@@ -46,7 +46,6 @@
                                     <td>{{($goal->date) }}</td>
                                 </tr>
                             @endforeach
-                            @endif
                         </tbody>
                     </table>
                 </div>

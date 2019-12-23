@@ -45,23 +45,24 @@ class SoukatuController extends Controller
   } 
 
 
-  public function index(Request $request)
+  public function show(Request $request)
   {
+      $user_id = Auth::id();
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
-          $posts = Goal::where('title', $cond_title)->get();
+          $posts = Goal::where('title', $cond_title)->where('user_id',$user_id)->get();
       } else {
-          $posts = Goal::all();
+          $posts = Goal::where('user_id',$user_id)->get();
       }
-      return view('index', ['posts' => $posts, 'cond_title' => $cond_title]);
+      return view('show', ['user_id' => $user_id,'posts' => $posts, 'cond_title' => $cond_title]);
   }
   
   
   public function log()
   {
-    $posts = Goal::all();
+    $user_id = Auth::id();
+    $posts = Goal::where('user_id',$user_id)->get();
       return view('log',['posts' => $posts]);
-      
   }
   
   
@@ -69,11 +70,11 @@ class SoukatuController extends Controller
   {
     $this->validate($request, Log::$rules);
     $log = new Log;
-    $log->user_id = $request->user()->id;
-    $log->goal_id = $request->goal()->id;
+    $log->user_id = Auth::id();
     $form = $request->all();
-    
-    $log->fill($form)->save();
+    $log=$log->fill($form);
+    $log->selectgoal=Goal::find($log->goal_id)->title; 
+    $log->save();
     
       return redirect('soukatu/log');
   } 

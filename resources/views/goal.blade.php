@@ -80,7 +80,7 @@
                 </div>
                 {{ csrf_field() }}
                     <div><input type="submit" class="btn btn-primary mx-auto" value="新規目標作成！"></div>
-                    <a href=https://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/index>目標管理</a>
+                    <a href={{ route('show')}} id=“mygoal”>目標管理</a>
                 </form>
 		</div>
 	</div>

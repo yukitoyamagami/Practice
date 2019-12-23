@@ -11,11 +11,12 @@
 |
 */
 Route::get('/', 'SoukatuController@about');
+
 Route::group(['middleware' => 'auth'], function() {
     Route::get('soukatu/start', 'SoukatuController@start');
     Route::get('soukatu/goal', 'SoukatuController@goal');
     Route::post('soukatu/goal', 'SoukatuController@create');
-    Route::get('soukatu/index', 'SoukatuController@index');
+    Route::get('soukatu/show', 'SoukatuController@show')->name('show');
     Route::get('soukatu/log', 'SoukatuController@log');
     Route::post('soukatu/log', 'SoukatuController@createlog');
     Route::get('soukatu/activitylog', 'SoukatuController@activitylog');

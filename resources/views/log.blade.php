@@ -18,12 +18,13 @@
 			
 			    <div class="form-group row">
                         <label class="col-md-2">目標選択</label>
-                        <select name="selectgoal">
+                        <select name="goal_id">
                         	@foreach($posts as $goal)
-                        	<option value="{{ $goal->title }}">{{ $goal->title }}</option>
+                        	<option value="{{ $goal->id }}">{{$goal->title }}</option>
                         	 @endforeach
                         </select>
                 </div>
+                
                 <div class="form-group row">
                         <label class="col-md-2">活動日</label>
                             <div class="col-md-10">

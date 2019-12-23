@@ -9,7 +9,7 @@ class Log extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'selectgoal' => 'required',
+        'goal_id' => 'required',
         'datelog' => 'required',
         'bodylog' => 'required',
         );

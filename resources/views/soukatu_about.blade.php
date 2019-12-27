@@ -4,30 +4,37 @@
 @section('content')
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-xs-11 col-md-11 mx-auto cover-img">
-			<div class="cover-content">
-				<h1 class="title">Let`s Achieve Your Goal!</h1>
+		<div class="col-xs-12 col-md-12 mx-auto cover-img">
+			<div class="title">
+				<h1>Let`s Achieve Your Goal!</h1>
+				<p>目標達成のために行動を記録しよう</p>
 			</div>
-			<div class="col-xs-3 col-md-3 mx-auto">
-			<a class="btn btn-success mx-auto " href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/register">目標に向かって走りだす</a>
+			<div class="col-xs-7 col-md-7 mx-auto" style="text-align:center;">
+			<button class="btn_top_login " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/login'">ログイン</button>
+			<button class="btn_top_testlogin " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/start'">テストユーザーログイン</button>
+			<button class="btn_top_register " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/register'">新規登録</button>
 			</div>
 		</div>
 	</div>
-	
-	
 	<div class="row">
 		<div class="col-xs-11 col-md-11 mx-auto">
-			<h1 mx-auto style="text-align:center;">ソウカツを使ってあなたの目標を達成しよう</h1>
-			<div class="box3 col-xs-3 col-md-3">
+			<h1 mx-auto style="text-align:center;">ソウカツは目標を管理するアプリです</h1>
+			
+			<div class="box1 col-xs-3 col-md-3">
     			<h2>自由に目標設定</h2>
+    			<img src='../images/goal_icon.jpeg' class='icon'/>
     			<p>自由に目標を設定することができます。フォーマットに沿って入力するだけで目標が明確化</p>
 			</div>
-			<div class="box3 col-xs-3 col-md-3">
+			
+			<div class="box1 col-xs-3 col-md-3">
 				<h2>目標を毎日確認</h2>
+				<img src='../images/log_icon.jpeg' class='icon'/>
     			<p>設定した目標への成果を更新することができます。毎日記録をすることで目標に近づきましょう</p>
 			</div>
-			<div class="box3 col-xs-3 col-md-3">
-				<h2>期限が来たら振り返り</h2>
+			
+			<div class="box1 col-xs-3 col-md-3">
+				<h2>目標の振り返り</h2>
+				<img src='../images/check_icon.jpeg' class='icon'/>
     			<p>努力する上で最も重要なのが振り返りです。今回の目標はどれくらい達成できたか振り返りましょう</p>
 			</div>
 		</div>

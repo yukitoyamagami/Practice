@@ -5,29 +5,60 @@ footer {
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fff;
+  background-color: #f8fafc;
   color: #000;
+}
+
+.navbar {
+  padding: 0 0;
 }
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #232f3e;
 }
 
 .navbar-brand {
-  color: #008000;
-  font-size: 30px;
+  color: #fff;
+  font-size: 25px;
+}
+
+.navbar-brand:hover {
+  color: #fff;
 }
 
 .nav-link {
-  color: #000;
-  font-size: 20px;
+  color: #fff;
+  font-size: 15px;
   margin-left: 10px;
+}
+
+.nav-name {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.nav-link:hover {
+  color: #fff;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .list-group-item {
   border-color: #000;
   background-color: #fff;
+}
+
+ul.navbar-nav li.nav-item {
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.row_top {
+  margin: 20px 0px;
 }
 
 .cover-img {
@@ -39,24 +70,102 @@ body {
 
 .title {
   text-align: center;
-  padding-top: 160px;
-  padding-bottom: 40px;
-  font-size: 7em;
+  margin-top: 160px;
   color: #f8f8ff;
-  font-family: serif;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-family: "Caveat", cursive;
+  padding: 0;
+}
+
+.title h1 {
+  font-size: 100px;
+}
+
+.title p {
+  font-size: 30px;
 }
 
 .row {
   margin-bottom: 30px;
 }
 
-.box3 {
-  padding: 0.5em 1em;
-  height: 500px;
-  margin: 10px 52px;
+.box2 {
+  height: 200px;
+  display: block;
+  border: medium solid #EEEEEE;
+}
+
+.box1 {
+  padding: 10px 20px;
+  height: 300px;
+  margin: 40px 48px;
   color: #2c2c2f;
-  background: #cde4ff;
+  background: #fff;
+  border: medium solid #EEEEEE;
   display: inline-block;
+}
+
+.box1 p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.box1 h2 {
+  text-align: center;
+}
+
+.btn_top_login {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  padding: 10px 50px;
+  margin: 40px 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: #FF9966;
+  color: #FF9966;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+.btn_top_register {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  padding: 10px 50px;
+  margin: 40px 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #3366FF;
+  color: #3366FF;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+.btn_top_login:hover {
+  background-color: #FF9966;
+  color: #fff;
+}
+
+.btn_top_register:hover {
+  background-color: #3366FF;
+  color: #fff;
+}
+
+.dropdown-menu {
+  text-align: center;
+  color: #000;
+}
+
+.box3 {
+  padding: 10px 30px;
+  height: 300px;
+  margin: 20px 48px;
+  color: #2c2c2f;
+  background: #fff;
+  border: medium solid #EEEEEE;
+  display: inline-block;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .box3 p {
@@ -69,45 +178,88 @@ body {
   text-align: center;
 }
 
-.btn {
+.box3::before,
+.box3::after {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  z-index: 2;
+  content: "";
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.box3::before {
+  border-top: 2px solid #232f3e;
+  border-bottom: 2px solid #232f3e;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+
+.box3::after {
+  border-right: 2px solid #232f3e;
+  border-left: 2px solid #232f3e;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+}
+
+.box3:hover::after,
+.box3:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.icon {
   display: block;
-  padding: 10px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
 }
 
-.dropdown-menu {
-  text-align: center;
-  color: #000;
+table th {
+  position: relative;
+  text-align: left;
+  width: 20%;
 }
 
-.hatena{
-    position: relative;
-    cursor: pointer;
-    display:  inline-block;
+table td {
+  text-align: left;
+  width: 80%;
 }
-.hatena_icon{
-  height: 20px;
-  padding-left:10px;
+
+.hatena img {
+  width: 20px;
 }
 
 .description5 {
-    display: none;
-    position: absolute;
-    padding: 15px;
-    font-size: 12px;
-    line-height: 1.6em;
-    color: #fff;
-    border-radius: 5px;
-    background: #000;
-    width: 300px;
+  display: none;
+  position: absolute;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.6em;
+  color: #fff;
+  border-radius: 5px;
+  background: #000;
+  width: 400px;
 }
 
-.hatena:hover .description5{
-    display: inline-block;
-    top: 0px;
-    left: 37px;
+.hatena:hover .description5 {
+  margin-left: 10px;
+  display: inline-block;
+  z-index: 1;
 }
-.dropdown-item{
-  border-bottom: solid;
-  border-width: thin;
-  border-color: #e8e8e8;
+
+.btn {
+  text-align: center;
+  margin-right: 15px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  border-radius: 10px;
+}
+
+.btn_submit {
+  text-align: center;
+  margin: auto;
 }

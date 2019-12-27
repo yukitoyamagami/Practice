@@ -147,12 +147,18 @@ return [
     */
 
     'attributes' => [
+        'name'=> 'ユーザー名',
+        'email'=> 'メールアドレス',
+        'password'=> 'パスワード',
         'selectgoal' => '目標分類',
         'title' => '目標名',
         'body' => '目標計画',
         'date' => '目標達成予定日',
         'datelog' => '活動日',
         'bodylog' => '活動内容',
+        'bodyreason'=> '達成度合の理由',
+        'bodygood'=> '良かった点',
+        'bodybad'=> '反省点',
         ],
 
 ];

@@ -2,7 +2,7 @@
 @section('title','目標一覧')
 @section('content')
  <div class="container">
-        <div class="row">
+        <div class="row_top">
             <h2>目標一覧</h2>
         </div>
         <div class="row">
@@ -27,27 +27,41 @@
         
         <div class="row">
             <div class="list-goal col-md-12 mx-auto">
+                    @if(count($posts)==0)
+                        <div class="alert alert-danger" role="alert">
+                        目標が登録されていません
+                        </div>
+                    @endif
                 <div class="row">
-                    <table class="table">
-                        <thead>
+                    @foreach($posts as $goal)
+                    <table border="2" class="table">
                             <tr>
-                                <th width="10%">目標分類</th>
-                                <th width="20%">タイトル</th>
-                                <th width="50%">目標計画</th>
-                                <th width="10%">目標達成予定日</th>
+                                <th>タイトル</th>
+                                <td>{{($goal->title) }}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($posts as $goal)
-                                <tr>
-                                    <td>{{($goal->selectgoal) }}</td>
-                                    <td>{{ \Str::limit($goal->title, 100) }}</td>
-                                    <td>{{ \Str::limit($goal->body, 250) }}</td>
-                                    <td>{{($goal->date) }}</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
+                            <tr>
+                                <th>目標分類</th>
+                                <td>{{($goal->selectgoal) }}</td>
+                            </tr>
+                            <tr>
+                                <th>目標計画</th>
+                                <td>{{($goal->body) }}</td>
+                            </tr>
+                            <tr>
+                                <th>目標達成予定日</th>
+                                <td>{{($goal->date) }}</td>
+                            </tr>
+                            <tr>
+                                <th>目標の管理</th>
+                                <td>
+                                <a href="{{ action('SoukatuController@edit', ['id' => $goal->id]) }}" role="button" class="btn btn-primary">目標編集</a>
+                                <a href="{{ action('SoukatuController@delete', ['id' => $goal->id]) }}" role="button" class="btn btn-primary">目標削除</a>
+                                <a href="{{ action('SoukatuController@show_log', ['id' => $goal->id]) }}" role="button" class="btn btn-primary">活動記録の確認</a>
+                                <a href="{{ action('SoukatuController@show_check', ['id' => $goal->id]) }}" role="button" class="btn btn-primary">活動総括の確認</a>
+                                </td>
+                            </tr>
                     </table>
+                    @endforeach
                 </div>
             </div>
         </div>

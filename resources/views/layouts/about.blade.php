@@ -50,9 +50,12 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('messages.Register') }}</a></li>
                             @else
+                            <li class="nav-name" href="#">
+                               {{ Auth::user()->name }} 
+                            </li>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                <a id="navbarDropdown" color="black" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    メニュー <span class="caret"></span>
                                 </a>
                                 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,12 +73,19 @@
                                         目標設定
                                     </a>
                                     
+                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/show">
+                                        目標一覧                                    
+                                    </a>
+                                    
                                     <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/log">
-                                        活動記録
+                                        活動記録入力
                                     </a>   
                                     <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/check">
-                                        活動総括
-                                    </a>                                        
+                                        活動総括入力
+                                    </a> 
+                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/user">
+                                        ユーザー情報更新
+                                    </a> 
                                 </div>
                             </li>
                             @endguest
@@ -86,10 +96,11 @@
             </nav>
             {{-- ここまでナビゲーションバー --}}
 
-            <main class="py-4">
+            <main class="main">
                 {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                 @yield('content')
             </main>
+            
             <footer>
             <hr>
             <div class="text-center text-muted">© 2019 ソウカツ</div>

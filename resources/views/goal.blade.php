@@ -4,16 +4,22 @@
 
 @section('content')
 <div class="container-fluid">
-	<div class="row">
+	<div class="row_top">
 		<div class="col-xs-8 col-md-8 mx-auto">
-			<h2 mx-auto style="text-align:left;">新しい目標を登録しよう</h2>
+			<h2 mx-auto style="text-align:left; margin-bottom:20px">新しい目標を登録しよう</h2>
 			<form action="{{ action('SoukatuController@create') }}" method="post" enctype="multipart/form-data">
 			         @if (count($errors) > 0)
+			         <div class="alert alert-danger" role="alert">
                         <ul>
                             @foreach($errors->all() as $e)
                                 <li>{{ $e }}</li>
                             @endforeach
                         </ul>
+                     </div>
+                     @elseif(session('flash_message'))
+                     <div class="alert alert-success" role="alert">
+                        {{ session('flash_message') }}
+                     </div>
                     @endif
                     
                 <div class="form-group row">
@@ -57,6 +63,16 @@
                             <option value="水泳">水泳</option>
                             <option value="その他運動">その他運動</option>
                             </optgroup>
+                            <optgroup label=生活習慣>
+                            <option value="早寝早起き">早寝早起き</option>
+                            <option value="節約">節約</option>
+                            <option value="断捨離">断捨離</option>
+                            <option value="その他生活習慣">その他生活習慣</option>
+                            </optgroup>
+                            <optgroup label=その他目標>
+                            <option value="その他目標">その他目標</option>
+                            </optgroup>
+                                
                         </select>
                 </div>
                 
@@ -79,8 +95,7 @@
                         </div>
                 </div>
                 {{ csrf_field() }}
-                    <div><input type="submit" class="btn btn-primary mx-auto" value="新規目標作成！"></div>
-                    <a href={{ route('show')}} id=“mygoal”>目標管理</a>
+                    <div class="btn_submit"><input type="submit" class="btn btn-primary mx-auto" value="新規目標作成！"></div>
                 </form>
 		</div>
 	</div>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('title','ログインページ')
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -53,6 +53,9 @@
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('messages.Login') }}
                                     </button>
+                                    <a href="password/reset" class="btn btn-link">
+                                        パスワードを忘れましたか？
+                                    </a>
                                 </div>
                             </div>
                         </form>

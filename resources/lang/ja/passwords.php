@@ -17,6 +17,6 @@ return [
     'sent' => '指定されたメールアドレスにパスワードのリセットリンクを送信しました',
     'token' => 'This password reset token is invalid.',
     'user' => "入力されたメールアドレスは登録されていません",
-    'throttled' => 'Please wait before retrying.',
+    'throttled' => '指定されたメールアドレスは既にリセットリンクを送信しています',
 
 ];

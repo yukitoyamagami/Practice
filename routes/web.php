@@ -12,9 +12,9 @@
 */
 Route::get('/', 'SoukatuController@about');
 Route::get('soukatu/start', 'SoukatuController@start');
+Route::get('soukatu/goal', 'SoukatuController@goal');
 
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('soukatu/goal', 'SoukatuController@goal');
     Route::post('soukatu/goal', 'SoukatuController@create');
     Route::get('soukatu/goal/edit', 'SoukatuController@edit');
     Route::post('soukatu/goal/edit', 'SoukatuController@update');

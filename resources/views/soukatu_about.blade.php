@@ -10,9 +10,9 @@
 				<p>目標達成のために行動を記録しよう</p>
 			</div>
 			<div class="col-xs-7 col-md-7 mx-auto" style="text-align:center;">
-			<button class="btn_top_login " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/login'">ログイン</button>
-			<button class="btn_top_testlogin " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/start'">テストユーザーログイン</button>
-			<button class="btn_top_register " type=“button” onclick="location.href='http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/register'">新規登録</button>
+			<button class="btn_top_login " type=“button” onclick="location.href='/login'">ログイン</button>
+			<button class="btn_top_testlogin " type=“button” onclick="location.href='soukatu/start'">テストユーザーログイン</button>
+			<button class="btn_top_register " type=“button” onclick="location.href='/register'">新規登録</button>
 			</div>
 		</div>
 	</div>

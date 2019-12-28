@@ -21,11 +21,7 @@ class SoukatuController extends Controller
   
     public function start()
     {
-    if(Auth::check()){
       return view('start');
-    }else{
-      return view('soukatu_about');
-   }
    }
   
      public function goal()

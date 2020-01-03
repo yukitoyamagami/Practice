@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         $this->clearLoginAttempts($request);
         $request->session()->flash('flash_message','ログインに成功しました');
-        return view('start');
+        return redirect('https://soukatu.herokuapp.com/soukatu/start');
         //$this->authenticated($request, $this->guard()->user())
                 //?: redirect()->intended($this->redirectPath());
                 

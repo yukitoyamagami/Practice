@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/start';
+    protected $redirectTo = 'https://soukatu.herokuapp.com/soukatu/start';
 
     /**
      * Create a new controller instance.

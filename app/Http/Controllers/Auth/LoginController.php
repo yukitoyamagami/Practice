@@ -32,7 +32,7 @@ class LoginController extends Controller
 
         $this->clearLoginAttempts($request);
         $request->session()->flash('flash_message','ログインに成功しました');
-        return 1;
+        return view('start');
         //$this->authenticated($request, $this->guard()->user())
                 //?: redirect()->intended($this->redirectPath());
                 

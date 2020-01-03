@@ -29,7 +29,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="soukatu/start">
+                    <a class="navbar-brand" href="https://soukatu.herokuapp.com/soukatu/start">
                         {{ config('app.name', 'ソウカツ') }}
                     </a>
                     
@@ -69,21 +69,21 @@
                                         @csrf
                                     </form>
                                     
-                                    <a class="dropdown-item" href="soukatu/goal">
+                                    <a class="dropdown-item" href="https://soukatu.herokuapp.com/soukatu/goal">
                                         目標設定
                                     </a>
                                     
-                                    <a class="dropdown-item" href="soukatu/show">
+                                    <a class="dropdown-item" href="https://soukatu.herokuapp.com/soukatu/show">
                                         目標一覧                                    
                                     </a>
                                     
-                                    <a class="dropdown-item" href="soukatu/log">
+                                    <a class="dropdown-item" href="https://soukatu.herokuapp.com/soukatu/log">
                                         活動記録入力
                                     </a>   
-                                    <a class="dropdown-item" href="soukatu/check">
+                                    <a class="dropdown-item" href="https://soukatu.herokuapp.com/soukatu/check">
                                         活動総括入力
                                     </a> 
-                                    <a class="dropdown-item" href="soukatu/user">
+                                    <a class="dropdown-item" href="https://soukatu.herokuapp.com/soukatu/user">
                                         ユーザー情報更新
                                     </a> 
                                 </div>

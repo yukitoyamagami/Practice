@@ -29,7 +29,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="https://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/start">
+                    <a class="navbar-brand" href="soukatu/start">
                         {{ config('app.name', 'ソウカツ') }}
                     </a>
                     
@@ -69,21 +69,21 @@
                                         @csrf
                                     </form>
                                     
-                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/goal">
+                                    <a class="dropdown-item" href="soukatu/goal">
                                         目標設定
                                     </a>
                                     
-                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/show">
+                                    <a class="dropdown-item" href="soukatu/show">
                                         目標一覧                                    
                                     </a>
                                     
-                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/log">
+                                    <a class="dropdown-item" href="soukatu/log">
                                         活動記録入力
                                     </a>   
-                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/check">
+                                    <a class="dropdown-item" href="soukatu/check">
                                         活動総括入力
                                     </a> 
-                                    <a class="dropdown-item" href="http://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com/soukatu/user">
+                                    <a class="dropdown-item" href="soukatu/user">
                                         ユーザー情報更新
                                     </a> 
                                 </div>

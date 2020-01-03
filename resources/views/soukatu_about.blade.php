@@ -11,6 +11,11 @@
 			</div>
 			<div class="col-xs-7 col-md-7 mx-auto" style="text-align:center;">
 			<button class="btn_top_login " type=“button” onclick="location.href='/login'">ログイン</button>
+			<%= form_for(:session, url: login_path) do |f| %>
+    		<%= f.hidden_field :email, value: 'テストログイン用email' %>
+    		<%= f.hidden_field :password, value: 'テストログイン用password' %>
+    		<%= f.submit 'テストログイン', class: 'btn btn-default' %>
+			<% end %>
 			<button class="btn_top_testlogin " type=“button” onclick="location.href='soukatu/start'">テストユーザーログイン</button>
 			<button class="btn_top_register " type=“button” onclick="location.href='/register'">新規登録</button>
 			</div>

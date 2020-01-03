@@ -67,11 +67,9 @@ class SoukatuController extends Controller
      
       $goal = Goal::find($request->id);
       $goal_id =$request->id;
-      $log = Log::where('goal_id',$goal_id)->get();
-      $check =Check::where('goal_id',$goal_id)->get();
+      $log = Log::where('goal_id',$goal_id)->delete();
+      $check =Check::where('goal_id',$goal_id)->delete();
       $goal->delete();
-      $log->delete();
-      $check->delete();
       return redirect('soukatu/show');
   }  
   
@@ -153,6 +151,10 @@ class SoukatuController extends Controller
      public function useredit(Request $request)
   {
     $user = User::find(Auth::id());
+    $user_id = Auth::id();
+    if ($user_id==1) {
+      return redirect('soukatu/start');
+      }
       return view('user_config',['user' => $user]);
   }
   

@@ -29,7 +29,7 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-expand-md navbar-laravel">
                 <div class="container">
-                    <a class="navbar-brand" href="https://ecf9c7a6f7bc4ba091a47969d057aef5.vfs.cloud9.us-east-2.amazonaws.com">
+                    <a class="navbar-brand" href="https://soukatu.herokuapp.com/soukatu/start">
                         {{ config('app.name', 'ソウカツ') }}
                     </a>
                     

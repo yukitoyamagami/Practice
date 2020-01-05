@@ -9,6 +9,9 @@ body {
   color: #000;
 }
 
+select{
+  margin-left:15px;
+}
 .navbar {
  padding:0 0;
 }
@@ -24,6 +27,17 @@ body {
 
 .navbar-brand:hover{
   color:#fff;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .nav-link{
@@ -89,12 +103,6 @@ ul.navbar-nav li.nav-item{
   margin-bottom: 30px;
 }
 
-.box2{
-  height:200px;
-  display:block;
-  border:medium solid #EEEEEE;
-}
-
 .box1 {
     padding: 10px 20px;
     height:300px;
@@ -114,6 +122,14 @@ ul.navbar-nav li.nav-item{
 .box1 h2 {
   text-align: center;
 }
+
+.box2{
+  height:200px;
+  display:block;
+  border:medium solid #EEEEEE;
+}
+
+
 
 .btn_top_login{
   display:inline-flex;
@@ -269,3 +285,192 @@ table td{
   text-align:center;
   margin:auto;
 }
+
+@media screen and (max-width: 959px) {
+body {
+  font-size:0.8em;
+}
+.title h1{
+  font-size:70px;
+}
+
+.title p{
+  font-size:40px;
+}
+   
+.btn_top_login{
+  display:inline-flex;
+  padding:10px 50px;
+  margin:2px;
+  background-color:rgba(255,255,255,0.7);
+  border-color:#FF9966;
+  color:#FF9966;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+
+.btn_top_testlogin {
+  display:inline-flex;
+  padding:10px 50px;
+  margin:2px;
+  background-color:rgba(255,255,255,0.5);
+  border-color:#db7093;
+  color:#db7093;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+
+.btn_top_register{
+  display:inline-flex;
+  padding:10px 50px;
+  margin:2px;
+  background-color:rgba(255,255,255,0.3);
+  border-color:#3366FF;
+  color:#3366FF;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+.box1 {
+    padding: 10px 20px;
+    height:350px;
+    margin: 30px 10px;
+    color: #2c2c2f;
+    background:#fff;
+    border:medium solid #EEEEEE;
+    display: inline-block;
+}
+h1{
+  font-size:25px;
+}
+
+h2{
+  font-size:20px;
+}
+
+.col-md-3{
+  max-width:30%;
+}
+
+.box3 {
+    padding: 10px 30px;
+    height:300px;
+    margin: 10px 0px;
+    color: #2c2c2f;
+    background:#fff;
+    border:medium solid #EEEEEE;
+    display: inline-block;   
+    transition: background-color .5s;
+}
+
+.col-md-2{
+  max-width:49.7%;
+}
+
+select{
+  background-color:white;
+}
+
+.table th, .table td {
+    padding: 5px; 
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+input{
+  background-color:white;
+}
+   
+   
+   
+   
+   
+   
+   
+ }
+ 
+@media screen and (max-width: 560px) {
+.title h1{
+  font-size:30px;
+}
+
+.title p{
+  font-size:20px;
+}
+   
+.btn_top_login{
+  display:inline-flex;
+  padding:10px 50px;
+  margin:15px;
+  background-color:rgba(255,255,255,0.7);
+  border-color:#FF9966;
+  color:#FF9966;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+
+.btn_top_testlogin {
+  display:inline-flex;
+  padding:10px 50px;
+  margin:15px;
+  background-color:rgba(255,255,255,0.5);
+  border-color:#db7093;
+  color:#db7093;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+
+.btn_top_register{
+  display:inline-flex;
+  padding:10px 50px;
+  margin:15px;
+  background-color:rgba(255,255,255,0.3);
+  border-color:#3366FF;
+  color:#3366FF;
+  transition: background-color .5s;
+  border-radius:10px;
+}
+.box1 {
+    padding: 10px 20px;
+    height:300px;
+    margin: 0px;
+    color: #2c2c2f;
+    background:#fff;
+    border:medium solid #EEEEEE;
+    display: inline-block;
+}
+h1{
+  font-size:25px;
+}
+
+h2{
+  font-size:20px;
+}
+
+.box3 {
+    padding: 10px 30px;
+    height:300px;
+    margin: 10px 0px;
+    color: #2c2c2f;
+    background:#fff;
+    border:medium solid #EEEEEE;
+    display: inline-block;   
+    transition: background-color .5s;
+}
+select{
+  background-color:white;
+}
+
+.table th, .table td {
+    padding: 5px; 
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.btn{
+  padding: 0.2rem 0.7rem;;
+  margin:2px 0px;
+}
+input{
+  background-color:white;
+}
+ }

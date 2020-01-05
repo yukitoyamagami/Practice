@@ -18,7 +18,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-11 col-md-11 mx-auto">
-			<h1 mx-auto style="text-align:center;">ソウカツは目標を管理するアプリです</h1>
+			<h1 class="about  mx-auto" style="text-align:center;">ソウカツは目標を管理するアプリです</h1>
 			
 			<div class="box1 col-xs-3 col-md-3">
     			<h2>自由に目標設定</h2>

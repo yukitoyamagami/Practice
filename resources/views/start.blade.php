@@ -13,28 +13,28 @@
 		<div class="col-xs-11 col-md-11 mx-auto">
 			<h1 mx-auto style="text-align:center; margin:30px;">ソウカツスタートページ</h1>
 			
-			<a href='./goal'>
+			<a href='https://soukatu.herokuapp.com/soukatu/goal'>
 			<div class="box3 col-xs-2 col-md-2">
     				<img src='../images/goal_icon.jpeg' class='icon'/>
     				<h2>目標設定</h2>
     			<p>自由に目標を設定することができます。</p>
 			</div></a	>
 			
-			<a href="./show">
+			<a href="https://soukatu.herokuapp.com/soukatu/show">
 				<div class="box3 col-xs-2 col-md-2">
     				<img src='../images/show_icon.jpeg' class='icon'/>
     				<h2>目標一覧</h2>
     			<p>自分が設定した目標の確認が行えます。</p>
 			</div></a>
 			
-			<a href="./log">
+			<a href="https://soukatu.herokuapp.com/soukatu/log">
 			<div class="box3 col-xs-2 col-md-2">
 					<img src='../images/log_icon.jpeg' class='icon'/>
 					<h2>活動記録</h2>
     			<p>設定した目標の活動記録を登録しましょう。</p>
 			</div></a>
 			
-			<a href="./check">
+			<a href="https://soukatu.herokuapp.com/soukatu/check">
 			<div class="box3 col-xs-2 col-md-2">
 					<img src='../images/check_icon.jpeg' class='icon'/>
 					<h2>活動総括</h2>

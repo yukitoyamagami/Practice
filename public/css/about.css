@@ -497,4 +497,12 @@ table td {
   input {
     background-color: white;
   }
+
+  .col-md-3 {
+    max-width: 100%;
+  }
+
+  .col-md-2 {
+    max-width: 100%;
+  }
 }

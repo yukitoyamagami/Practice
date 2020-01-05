@@ -362,6 +362,10 @@ h2{
     transition: background-color .5s;
 }
 
+.col-md-2{
+  max-width:49.7%;
+}
+
 select{
   background-color:white;
 }
@@ -387,14 +391,6 @@ input{
 @media screen and (max-width: 560px) {
 .title h1{
   font-size:30px;
-}
-
-.col-md-2{
-  max-width:49.7%;
-}
-
-.col-md-3{
-  max-width:30%;
 }
 
 .title p{
@@ -476,5 +472,12 @@ select{
 }
 input{
   background-color:white;
+}
+.col-md-3{
+  max-width:100%;
+}
+
+.col-md-2{
+  max-width:100%;
 }
  }

@@ -5,7 +5,7 @@
 <div class="container-fluid">
 	<div class="row">
 		@if(Session::has('flash_message'))
-            <div class="col-xs-11 col-md-11 mx-auto alert alert-success" style="text-align:center;" role="alert">
+            <div class="col-xs-11 col-md-11 mx-auto alert alert-success" style="text-align:center; margin-top:10px" role="alert">
                 {{ session('flash_message') }}
             </div>
         @endif

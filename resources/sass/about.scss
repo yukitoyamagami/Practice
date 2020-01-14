@@ -1,3 +1,4 @@
+//PC画面用のスタイル
 footer{
   margin-bottom:60px;
 }
@@ -285,7 +286,8 @@ table td{
   margin:auto;
 }
 
-@media screen and (max-width: 959px) {
+//タブレット画面用のスタイル
+@media screen and (max-width: 1000px) {
 body {
   font-size:0.8em;
 }
@@ -387,6 +389,7 @@ input{
    
  }
  
+//携帯画面用のスタイル
 @media screen and (max-width: 560px) {
 .title h1{
   font-size:30px;

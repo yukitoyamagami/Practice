@@ -3,8 +3,9 @@
 ソウカツは目標を管理するためのサービスです。目標を立てた後は毎日の活動をログとして残す事ができます。
 
 ## ソウカツの画像
-https://imgur.com/IbxWcNx
-https://imgur.com/TrH1h0E
+![ソウカツ　トップページ](https://user-images.githubusercontent.com/57784760/72316474-9a22da80-36d9-11ea-8d85-7fa887d6210a.jpg)
+
+<img width="1203" alt="目標一覧ページ" src="https://user-images.githubusercontent.com/57784760/72316482-a444d900-36d9-11ea-9bc3-d0c0a3879f14.png">
 
 ## ソウカツで何ができるのか？
 

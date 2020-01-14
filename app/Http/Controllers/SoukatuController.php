@@ -13,7 +13,7 @@ use App\Check;
 
 class SoukatuController extends Controller
 {
-    
+    //初期ページに飛びます
      public function about()
   {
       return view('soukatu_about');
@@ -21,17 +21,20 @@ class SoukatuController extends Controller
   
     public function start()
     {
+      //ユーザー用初期ページに飛びます
       return view('start');
    }
   
      public function goal()
-  {
+  {   
+      //目標設定ページに飛びます
       return view('goal');
   }
   
   
     public function create(Request $request)
   {
+    //新規目標を作成します
     $this->validate($request, Goal::$rules);
     
     $goal = new Goal;
@@ -45,6 +48,7 @@ class SoukatuController extends Controller
   
    public function edit(Request $request)
   {
+    //目標の編集ページに飛びます
       $goal = Goal::find($request->id);
       if (empty($goal)) {
         abort(404);    
@@ -55,6 +59,7 @@ class SoukatuController extends Controller
 
   public function update(Request $request)
   {
+    //編集した目標を再度アップデートします
       $goal = Goal::find($request->id);
       $this->validate($request, Goal::$rules);
       $form = $request->all();
@@ -64,7 +69,7 @@ class SoukatuController extends Controller
 
   public function delete(Request $request)
   {
-     
+     //選択された目標を消去します
       $goal = Goal::find($request->id);
       $goal_id =$request->id;
       $log = Log::where('goal_id',$goal_id)->delete();
@@ -75,6 +80,7 @@ class SoukatuController extends Controller
   
   public function show(Request $request)
   {
+    //目標の一覧を表示します
       $user_id = Auth::id();
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
@@ -88,6 +94,7 @@ class SoukatuController extends Controller
   
   public function log()
   {
+    //活動記録入力ページに飛びます
     $user_id = Auth::id();
     $posts = Goal::where('user_id',$user_id)->get();
       return view('log',['posts' => $posts]);
@@ -96,6 +103,7 @@ class SoukatuController extends Controller
   
   public function createlog(Request $request)
   {
+    //新規の活動記録を作成します
     $this->validate($request, Log::$rules);
     $log = new Log;
     $log->user_id = Auth::id();
@@ -109,6 +117,7 @@ class SoukatuController extends Controller
   
    public function show_log(Request $request)
   {
+    //目標ごとに登録された活動記録を表示します
     $goal_id=$request->id;
     $title=Goal::find($goal_id)->title;
     $cond_title = $request->cond_title;
@@ -122,6 +131,7 @@ class SoukatuController extends Controller
   
     public function check()
   {
+    //総括入力ページに飛びます
     $user_id = Auth::id();
     $posts = Goal::where('user_id',$user_id)->get();
       return view('check',['posts' => $posts]);
@@ -129,6 +139,7 @@ class SoukatuController extends Controller
   
     public function createcheck(Request $request)
   {
+    //総括を作成します
     $this->validate($request, Check::$rules);
     $check = new Check;
     $check->user_id = Auth::id();
@@ -142,6 +153,7 @@ class SoukatuController extends Controller
   
      public function show_check(Request $request)
   {
+    //総括を表示します
     $goal_id=$request->id;
     $title=Goal::find($goal_id)->title;
     $posts = Check::where('goal_id',$goal_id)->get();
@@ -150,6 +162,7 @@ class SoukatuController extends Controller
 
      public function useredit(Request $request)
   {
+    //ユーザー情報編集ページに飛びます（Userテーブルのidが1のユーザーはテストユーザーに設定しているので、こちらのページには飛びません）
     $user = User::find(Auth::id());
     $user_id = Auth::id();
     if ($user_id==1) {
@@ -160,6 +173,7 @@ class SoukatuController extends Controller
   
        public function userupdate(Request $request)
   {
+    //ユーザー情報を更新します
       $user = User::find(Auth::id());
       $this->validate($request, User::$rules);
       $form = $request->all();

@@ -143,19 +143,6 @@ ul.navbar-nav li.nav-item {
   border-radius: 10px;
 }
 
-.btn_top_testlogin {
-  display: -webkit-inline-box;
-  display: inline-flex;
-  padding: 10px 50px;
-  margin: 40px 15px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-color: #db7093;
-  color: #db7093;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-  border-radius: 10px;
-}
-
 .btn_top_register {
   display: -webkit-inline-box;
   display: inline-flex;
